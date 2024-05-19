@@ -20,7 +20,7 @@
                 <h2> <a href="#projekt_header">Projekty</a> </h2>
             </header>
 			<!--kontakt-->
-            <section>
+            <section id="info">
                 <div id="kontakt">
                     <img alt="mail icon" src="images/at_logo.png">
                     <a href="mailto:d.bomba806@gmail.com">d.bomba806@gmail.com</a>
@@ -74,8 +74,9 @@
 					 <div id="inne">
                         <div> 
                             <img alt="Future school Project" src="images/monet_marzec.png">
-							<h4> <a href="https://dominikabomba.github.io/FutureSchoolProject.github.io/main/index.html"> Future School Project </a></h4>
-                            <div>Strona internetowa stworzona w ramach projektu „Szkoła Przyszłości” stworzonego we współpracy z Friedrich-Albert-Lange-Schule (FALS) w Niemczech
+							<h4> <a href="https://dominikabomba.github.io/FutureSchoolProject.github.io/main/index.html"> Strony z wykorzystaniem API, Gry w PyGame i wiele innych </a></h4>
+                            <div>
+							
                             </div>  
                         </div>
                         <div> 
@@ -91,6 +92,7 @@
             </article>
             
             <!--umiejętności-->
+			<h4> Umiejętności</h4>
             <div id="umiejetnosci">
                 <div id="software">
 					<div class="czynnosci_container"> 
@@ -130,7 +132,18 @@
             </div>
         </main>
 		<script>
+		window.onscroll = function() {skrolowanie()};
+
 		
+		var sticky = info.offsetTop;
+
+		function skrolowanie() {
+		  if (window.pageYOffset >= sticky) {
+			info.classList.add("sticky")
+		  } else {
+			info.classList.remove("sticky");
+		  }
+		}
 
 document.getElementById("myVid1").addEventListener("mouseover", function() {
 	this.play();
