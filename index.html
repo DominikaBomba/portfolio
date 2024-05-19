@@ -4,29 +4,43 @@
         <title> Portfolio - Dominika Bomba</title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </head>
     <body>
         <main>
             <aside> 
-                <a> Kontakt </a>
-                <a> Projekty </a>
-                <a> Skilsy </a>
+                <a href="#kontakt"> Kontakt </a>
+                <a href="#projekty"> Projekty </a>
+                <a href="#umiejetnosci"> Umiejętności </a>
                
             </aside>
         
             <header>
                 <h1>Dominika Bomba</h1>
-                <h2> Kontakt </h2>
+                <h2> <a href="#projekt_header">Projekty</a> </h2>
             </header>
+			<!--kontakt-->
+            <section>
+                <div id="kontakt">
+                    <img alt="mail icon" src="images/at_logo.png">
+                    <a href="mailto:d.bomba806@gmail.com">d.bomba806@gmail.com</a>
+                </div>
+                <div id="github">
+                    <img alt="mail icon" src="images/github_logo.png">
+                    <a href="https://github.com/DominikaBomba">DominikaBomba</a>
+                </div>
+            </section>
             <!--projekty-->
             <article>
-                <div id="projekt_header"> Projekty</div>
+                <div id="projekt_header"> Moje projekty</div>
                 <div id="projekty">
                     <div id="futureschool">
                         <div> 
-                            <img alt="Future school Project" src="images/monet_marzec.png">
+                            <video id="myVid1" controls autoplay width="400" height="400">
+        						<source src="videos/FutureSchool.mp4" type="video/mp4">
+    						</video>    
                             <h4> Future School Project </h4>
-                            <div>Strona internetowa stworzona w ramach projektu „Szkoła Przyszłości” stworzonego we współpracy z Friedrich-Albert-Lange-Schule (FALS) w Niemczech
+                            <div>Strona internetowa stworzona w ramach projektu „Szkoła Przyszłości” stworzonego we współpracy z Friedrich-Albert-Lange-Schule (FALS) w Niemczech. Wykorzystanie modelu 3D.
                             </div>  
                         </div>
                         <div> 
@@ -40,8 +54,12 @@
                     
                      <div id="notariat">
                         <div> 
-                            <img alt="Notariusz w Poznaniu" src="images/monet_marzec.png">
-                            <h4> Strona Notariat </h4>
+                          
+    						<video id="myVid2" controls autoplay width="400" height="400">
+        						<source src="videos/notariusz.mp4" type="video/mp4">
+    						</video>    
+
+                            <h4> <a href="https://notariuszswarzedz.pl/"> Strona Notariat </a> </h4>
                             <div>Strona stworzona na zlecenie Kancelarii Notarialnej w Poznaniu.
                             </div>  
                         </div>
@@ -52,25 +70,33 @@
                         
                         </div>
                     </div>
+					
+					 <div id="inne">
+                        <div> 
+                            <img alt="Future school Project" src="images/monet_marzec.png">
+							<h4> <a href="https://dominikabomba.github.io/FutureSchoolProject.github.io/main/index.html"> Future School Project </a></h4>
+                            <div>Strona internetowa stworzona w ramach projektu „Szkoła Przyszłości” stworzonego we współpracy z Friedrich-Albert-Lange-Schule (FALS) w Niemczech
+                            </div>  
+                        </div>
+                        <div> 
+                            <img alt="HTML logo" src="images/html_logo.jpg">
+                            <img alt="CSS logo" src="images/css_logo.png">
+                            <img alt="JS logo" src="images/js_logo.png">
+                            
+                        
+                        </div>
+                    </div>
                     
                 </div>
             </article>
-            <!--kontakt-->
-            <section>
-                <div id="kontakt">
-                    <img alt="mail icon" src="images/phone_symbol.png">
-                    <a href="mailto:d.bomba806@gmail.com">d.bomba806@gmail.com</a>
-                </div>
-                <div id="github">
-                    <img alt="mail icon" src="images/phone_symbol.png">
-                    <a href="https://github.com/DominikaBomba">DominikaBomba</a>
-                </div>
-            </section>
+            
             <!--umiejętności-->
             <div id="umiejetnosci">
                 <div id="software">
-                    <img alt="software icon">
-                    <h4> Software </h4>
+					<div class="czynnosci_container"> 
+						<img alt="software icon" src='images/coding.png'>
+						<h4> Software </h4>
+					</div>
                     <ol>
                         <li>Python (PyGame)</li>
                         <li>C++</li>
@@ -78,8 +104,11 @@
                     </ol>
                 </div>
                 <div id="frontend">
-                    <img alt="frontend icon">
-                    <h4> Frontend </h4>
+					<div class="czynnosci_container"> 
+						<img alt="frontend icon" src="images/coding.png">
+
+						<h4> Frontend </h4>
+					</div>
                     <ol>
                         <li>HTML</li>
                         <li>CSS</li>
@@ -87,8 +116,10 @@
                     </ol>
                 </div>
                 <div id="inne">
-                    <img alt="inne icon">
-                    <h4> Pozostałe  </h4>
+					<div class="czynnosci_container"> 
+						<img alt="inne icon" src="images/coding.png">
+						<h4> Pozostałe  </h4>
+					</div>
                     <ol>
                         <li>Git</li>
                         <li>SQL</li>
@@ -98,6 +129,25 @@
             
             </div>
         </main>
+		<script>
+		
+
+document.getElementById("myVid1").addEventListener("mouseover", function() {
+	this.play();
+});
+
+document.getElementById("myVid1").addEventListener("mouseleave", function() {
+	this.pause();
+});
+			
+document.getElementById("myVid2").addEventListener("mouseover", function() {
+	this.play();
+});
+
+document.getElementById("myVid2").addEventListener("mouseleave", function() {
+	this.pause();
+});
+		</script>
         
     </body>
 
