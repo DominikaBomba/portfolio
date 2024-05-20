@@ -18,7 +18,8 @@ html{
     width: 100vw;
     display: flex;
     flex-direction: column;
-    }
+justify-content: center;   
+	}
  
     aside{
         height: 5vh;
@@ -46,6 +47,12 @@ html{
         padding: 4% 10% 4% 10%;
     }
     /*projekty*/
+	article{
+		 display: flex;
+    	flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
     #projekt_header{
         width: 100%;
         font-size: 100px;
@@ -58,27 +65,45 @@ html{
         justify-content: space-evenly;
         flex-direction: column;
         align-items: center;
+		height: auto;
+		width: 90%;
+		
     }
+	#projekty h4{
+		margin:0;
+	}
+	#projekty h5{
+		text-align: center;
+	}
     #projekty>div{
         display: flex;
         justify-content: space-around;
         flex-direction: row;
         align-items: center;
         background-color: rgb(255,255,255,0.1);
-		border-radius: 10px;
+		border-radius: 20px;
         width: 96%;
-        margin-bottom: 2%;
+        margin-bottom: 5%;
         
     }
     
     #projekty>div>div:first-of-type{
         width: 70%;
-        height: 22vh;
+        height: 100%;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		padding: 5%;
+		text-align: center;
     }
     #projekty>div>div:last-of-type{
         width: 15%;
         height: 100%;
     }
+	#projekty>div>div>div{
+		margin-top: 3%;
+	}
 
     h4{
         width: 100%;
@@ -94,8 +119,8 @@ html{
        
     }
 	#projekty>div>div:first-of-type video {
-        width:100%;
-        height: 50%;
+        width:80%;
+        height: 200px;
         object-fit: cover;
 		margin-top: 20px;
         
@@ -137,11 +162,14 @@ html{
     }
     
     /*umiejętności*/
+	article ~ h4{
+		font-size: 50px;
+	}
     #umiejetnosci{
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 90vh;
+        height: 60vh;
     }
     #umiejetnosci>div{
         width: 95%;
@@ -154,12 +182,12 @@ html{
         text-decoration-color: orange;
         text-decoration-thickness: 25px;
 		text-align: start;
-		font-size: 50px;
+		font-size: 40px;
        
     }
     ol{
         list-style-type: none;
-        font-size: 5vw;
+        font-size: 30px;
         margin-left: 10%;
         font-family: monospace;
     }
@@ -241,12 +269,19 @@ html{
         justify-content: space-evenly;
         flex-direction: row;
         align-items: stretch;
+		height: auto;
     }
 	#projekty h4{
 		font-size: 3vh;
 		margin-top:5%;
 		margin-bottom: 0;
 		height: 15%;
+	}
+	#projekty h5{
+		margin: 0;
+		font-size: 1.5vh;
+		text-align: center;
+		
 	}
     #projekty>div{
         display: flex;
@@ -257,12 +292,12 @@ html{
 		border-radius: 10px;
         width: 30%;
         margin-bottom: 2%;
-		height: 50vh;
+	
 		transition: all 0.5s ease;
 		&:hover{
 			background-color: rgb(255,255,255,0.1);
 			width: 31%;
-			height: 51vh;
+			transform: scale(1.01);		
 		}
         
     }
@@ -293,6 +328,7 @@ html{
         font-size: 3vw;
         text-align: center;
     }
+
    
     #projekty>div>div:first-of-type img{
         width: 100%;
@@ -310,19 +346,32 @@ html{
     }
     #projekty>div>div:last-of-type img{
         width: 5vh;
+        height: 5vh;
+		transition: all 0.5s ease;
+		&:hover{
+			transform: scale(1.08);
+		}
         
-        
-		margin: 5%;
+		
     }
     section{
         width: 98%;
-        height: 6vh;
-     
+        height: 10vh;
+     position: relative;
         margin: 1%;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+		
     }
+	.sticky{
+		position: fixed;
+		top: -20px;
+		left:0;
+		z-index: 5;
+		background-color: rgb(21,32,43,0.5);
+		
+	}
     section>div{
         width: 30%;
         display: flex;
