@@ -8,10 +8,10 @@
     </head>
     <body>
         <main>
-            <aside> 
-                <a href="#kontakt"> Kontakt </a>
-                <a href="#projekty"> Projekty </a>
-                <a href="#umiejetnosci"> Umiejętności </a>
+            <aside id="menu"> 
+                <a href="#kontakt" value="/* Kontakt */"> /* Kontakt */</a>
+                <a href="#projekty"> /* Projekty */</a>
+                <a href="#umiejetnosci"> /* Umiejętności */</a>
                
             </aside>
         
@@ -138,6 +138,19 @@
         </main>
 		<script>
 		window.onscroll = function() {skrolowanie()};
+$(document).ready(function() {
+    $("#menu a").on("mouseenter", function() {
+        let originalText = $(this).text();
+        let newText = originalText.substring(4, originalText.length - 3);
+        $(this).data('original-text', originalText); // Store original text
+        $(this).text(newText);
+    });
+
+    $("#menu a").on("mouseleave", function() {
+        let originalText = $(this).data('original-text'); // Retrieve original text
+        $(this).text(originalText);
+    });
+});
 			/*
 		$(document).ready(function() {
   
