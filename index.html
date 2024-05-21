@@ -7,7 +7,11 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </head>
     <body>
+		<div id="loading">
+			<div> loading </div>
+		</div>
         <main>
+			
             <aside id="menu"> 
                 <a href="#kontakt" value="/* Kontakt */"> /* Kontakt */</a>
                 <a href="#projekty"> /* Projekty */</a>
@@ -16,7 +20,8 @@
             </aside>
         
             <header>
-                <h1>Dominika Bomba</h1>
+				<h1>Dominika Bomba</h1>
+				<img src="images/coder_emoji.png">
                 <h2> <a href="#projekt_header">Projekty</a> </h2>
             </header>
 			<!--kontakt-->
@@ -80,7 +85,7 @@
 							<h4> <a href="https://dominikabomba.github.io/FutureSchoolProject.github.io/main/index.html"> Inne projekty</a></h4>
 							<h5> <a href="https://github.com/DominikaBomba">Strony z wykorzystaniem API, Gry w PyGame i wiele innych </a></h5>
                             <div>
-							adsd assafd dsadsd assafd dsadsd assafd dsadsd assafd dsadsd assafd dsadsd assafd ds
+							Dostępne na <a href="https://github.com/DominikaBomba">Github</a>
                             </div>  
                         </div>
                         <div> 
@@ -101,7 +106,7 @@
             <div id="umiejetnosci">
                 <div id="software">
 					<div class="czynnosci_container"> 
-						<img alt="software icon" src='images/coding.png'>
+						<img alt="software icon" src='images/star.png'>
 						<h4> Software </h4>
 					</div>
                     <ol>
@@ -112,7 +117,7 @@
                 </div>
                 <div id="frontend">
 					<div class="czynnosci_container"> 
-						<img alt="frontend icon" src="images/coding.png">
+						<img alt="frontend icon" src="images/heart_icon.png">
 
 						<h4> Frontend </h4>
 					</div>
@@ -124,7 +129,7 @@
                 </div>
                 <div id="inne">
 					<div class="czynnosci_container"> 
-						<img alt="inne icon" src="images/coding.png">
+						<img alt="inne icon" src="images/flower_icon.png">
 						<h4> Pozostałe  </h4>
 					</div>
                     <ol>
@@ -133,23 +138,44 @@
                        
                     </ol>
                 </div>
+				<div id="umiejetnosci_reszta">
+					<h4> Inne </h4>
+					<div> Angielski - C1/C1+</div>
+					<div><p></p></div>
+					
+					<div> Hiszpański - A2+/B1</div>
+					<div><p></p></div>
+				</div>
             
             </div>
         </main>
+		<footer>
+		
+		</footer>
 		<script>
+        document.onreadystatechange = function() {
+            var loading = document.getElementById("loading");
+            if (document.readyState != "complete") {
+                loading.style.display = "flex";
+            } else {
+                loading.style.display = "none";
+            }
+        }
+			
 		window.onscroll = function() {skrolowanie()};
-$(document).ready(function() {
-    $("#menu a").on("mouseenter", function() {
-        let originalText = $(this).text();
-        let newText = originalText.substring(4, originalText.length - 3);
-        $(this).data('original-text', originalText); // Store original text
-        $(this).text(newText);
+			$(document).ready(function() {
+    		$("#menu a").on("mouseenter", function() {
+				let originalText = $(this).text();
+        	let newText = originalText.substring(4, originalText.length - 3);
+        	$(this).data('original-text', originalText); // Store original text
+				$(this).text(newText);
     });
 
     $("#menu a").on("mouseleave", function() {
         let originalText = $(this).data('original-text'); // Retrieve original text
         $(this).text(originalText);
     });
+	
 });
 			/*
 		$(document).ready(function() {
