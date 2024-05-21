@@ -157,8 +157,10 @@
             var loading = document.getElementById("loading");
             if (document.readyState != "complete") {
                 loading.style.display = "flex";
+				document.querySelector("main").style.display = "none";
             } else {
                 loading.style.display = "none";
+				document.querySelector("main").style.display = "flex";
             }
         }
 			
